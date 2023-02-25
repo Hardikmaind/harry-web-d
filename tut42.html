@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" >
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>css grid</title>
+        <style>
+            .grid{
+            
+                display: grid;
+                /* here the left rows will have the height size 1 fr only . but if we want to change theen we can also change it */
+                /* grid-template-rows:1fr 1fr 5fr; */
+                /* this will change the height of the remaing rows it will be the triple of the 1fr */
+                /* grid-auto-rows: 2fr;         */
+
+                grid-template-rows: repeat(4,1fr);
+
+                /* now this will also create columns. here since width of onlu t2 grid is mentioned so it will create only two columns. if we have to make 3 columns then mention 3rd grid columns width */
+                /* grid-template-columns: 1fr 4fr 1fr ; */
+                grid-template-columns: repeat(5,1fr);
+                grid-gap: 1rem;
+
+                grid-column-gap:7px ;
+                grid-row-gap: 1px;
+            }
+            .box{
+               background-color: red;  
+               border:2px solid black;
+               padding: 23px;
+            }
+            /* this is the pseudo selector for merging the grid items */
+            .box:first-child{
+                /* now i have to combine the first and the 6th box torgether lets see how i do it below */
+
+                /* this below will combine the first and the 2nd columned grid */
+                /* grid-column-start: 1;   starting border of the 1st grid item.in this case column item */
+                /* grid-column-end: 3;ending border of the 2nd grid item.in this case column item */
+
+                
+                /* grid-row-start: 1;   starting border of the 1st grid item. in this case row item */
+                /* grid-row-end: 3;ending border of the 2nd grid item. in this case row item */
+
+                /* this above can be written as (shortcut) */
+                    grid-column: 1/span 3;/* 1st grid item in column will span will 2 item*/
+                    grid-row: 1/span 2;/* 1st grid item in row will span will 2 item*/
+            }
+        </style>
+    </head>
+    <body>
+         <div class="grid">
+            <div class="box">this is the box-1</div>
+            <div class="box">this is the box-2</div>
+            <div class="box">this is the box-3</div>
+            <div class="box">this is the box-4</div>
+            <div class="box">this is the box-5</div>
+            <div class="box">this is the box-6</div>
+            <div class="box">this is the box-7</div>
+            <div class="box">this is the box-8</div>
+            <div class="box">this is the box-9</div>
+            <div class="box">this is the box-10</div>
+            <div class="box">this is the box-10</div>
+            <div class="box">this is the box-10</div>
+            <div class="box">this is the box-10</div>
+            <div class="box">this is the box-10</div>
+            <div class="box">this is the box-10</div>
+         </div>
+    </body>
+    </html>

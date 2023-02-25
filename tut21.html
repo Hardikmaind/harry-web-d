@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>alignment</title>
+    <!-- we imported the google font api from this below shit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+
+    <!-- we dont use the float and clear to align the boxes in the container , we use the flexbox. but just to have an idea we should know about this. -->
+    <style>
+        * {
+            /* People who are confused with border box. Consider following  scenario:
+            width : 500 px
+            padding :100 px
+            border: 10 px
+            without border-box the total width of content would be 500+100+10=610px.but with border-box total width of the content would be 500 only 100 and 10 px will consider inside 500 px. */
+
+            /* added this so that chagning margin or width does not change the width of the block */
+            box-sizing: border-box;
+        }
+
+        body {
+            /* this is the css style sheet of the above imported google font api */
+            font-family: 'Roboto Mono', monospace;
+            background-color: rgb(145, 233, 233);
+        }
+
+        * {}
+
+        /* you can see that the item and container is differentiated by margin */
+        .container {
+            width: 900px;
+            border: 3px solid purple;
+            /* this auto sets the margin in the x axis in the middle. we can set the margin in the y direction also , we just have to write it before auto */
+            margin: 33px auto;
+            background: rgb(158, 134, 245)
+        }
+
+        .item {
+            border: 3px solid grey;
+            margin: 12px 3px;
+            padding: 12px 3px;
+            /* with just background we can use all the properties of the "background" while with just background color we can only specify "background color" only*/
+            background-color: rgb(235, 74, 192);
+
+        }
+
+        #fruit {
+            float: left;
+            width: 48%
+        }
+
+        #computer {
+            /* this means that it is floated in the right of the container */
+            float: right;
+            width: 48%
+        }
+
+        #stationary {
+            /* why have we written the float left on the first left what does it do?....it is there to contain the specific thing in the container in the specific manner..like floating in the left or right of the container */
+
+            /* float:left; */
+
+            /* if i remove the below "flaot:left" the stationary bloack will get mergerd(OVERLAPPED) int fruit and computer . now lets try removing it. to do that it should not get mergerd into upper blocks fruit and computer just wrte the "clear left" instead of float left */
+
+
+            /*now if we wrote the clear left that means the whatever whe float left is they sholuld on overlap on the stationary(or where the clear left is written).verify this by seeing the webpage.if written "if written clear left the that means no "float left" will overlap him. similarly for the  "clear right" and the "float:right"used*/
+
+            clear: left;
+            clear: right;
+            /*now can see that all the blocks(fruit,computer and stationary) in the container are separated with each other */
+
+            /* now instead of writing both the clear:left and clear:right we can write see below*/
+
+            /* "clear:both" */
+            width: 100%
+        }
+
+        p,
+        h3 {
+            /* this will align the text in the right side */
+            text-align: right;
+            /* now if i write text align again the above one will get overwritten */
+            text-align: left;
+            /*this will be the final style , since we know that whichever is written in the last that style will be applied*/
+            text-align: center;
+            text-align: justify;
+        }
+
+        /* we can also align our h1 heading like this but u can see below that i have used the inline css in  the h1 element by just using the style keyword(line no 93) */
+        h1 { 
+            /* we can also add padding and margin to the heading */
+            
+            margin:23px auto;
+            width: 368px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- we can also put h1 in the middle like this or simply we will write it inside the container
+        <h1 style="text-align:center;">welcome to align and float</h1> -->
+    <div class="container">
+        <h1>welcome to my store</h1>
+        <div id="fruit" class="item">
+            <h3>Fruits</h3>
+            <p id="fruitpara" class="para">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo in accusantium eius sint at architecto hic
+                labore. Sapiente deserunt maxime a inventore adipisci maiores enim corporis, harum modi libero Lorem
+                ipsum dolor sit amet consectetur adipisicing elit. Consectetur laudantium libero rem veniam, adipisci
+                minus unde. Quibusdam placeat optio dolorem error, natus magni deserunt cum numquam mollitia ducimus
+                harum deleniti vero quod ad ipsum.
+            </p>
+        </div>
+        <div id="computer" class="item">
+            <h3>computer</h3>
+            <p id="computerpara" class="para">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea adipisci, explicabo unde, tempore excepturi
+                animi libero temporibus dolorem assumenda iusto fugit at cupiditate! Ab facilis, quisquam itaque porro
+                excepturi eligendi. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero, esse saepe?
+                Deleniti, repudiandae explicabo tempora consequatur iste aliquam facilis saepe perferendis ipsum fuga
+                quae, voluptatibus beatae ducimus, commodi ad sunt officiis? Molestias, ea explicabo?
+            </p>
+        </div>
+        <div id="stationary" class="item">
+            <h3>stationary</h3>
+            <p id="stationarypara" class="para">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus perspiciatis quasi at eaque. Et vel
+                fugiat quibusdam neque fuga. Velit amet minus suscipit nulla, alias magnam unde perspiciatis dolorem
+                tenetur.
+            </p>
+        </div>
+        <div id="glasses" class="item">
+            <h3>glasses</h3>
+            <p id="glassespara" class="para">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus perspiciatis quasi at eaque. Et vel
+                fugiat quibusdam neque fuga. Velit amet minus suscipit nulla, alias magnam unde perspiciatis dolorem
+                tenetur.
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>

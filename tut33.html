@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>before and after psedudo selector</title>
+    <style>
+
+        /* If we wanted to reduce opacity of bg we would have to do it in body{} which would reduce opacity of text also. So to seperate bg and text he used ::before with  bg  & no content. Now reducing opacity in section::before selector reduces opacity of bg but not the text because they are seperate now. Correct me if I am wrong but I think this is what is happening */
+
+        @import url('https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&display=swap');
+        body {
+            background-color: black;
+            color: white;
+            padding:0px;
+            margin:0px; 
+
+            /* here we can see that we cannot apply background color and background in the same element or class. both(background color and background) are differet things */
+
+            /* background: url('https://plus.unsplash.com/premium_photo-1665657351688-3f147227034d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1780&q=80') no-repeat center center/cover ; */
+
+        }
+
+        
+
+        .navigation {
+            display: flex;
+            /*since made the display flex . flex direction default is row. no need to mention it again*/
+            background-color: #334d30;
+            border-radius: 4px;
+        }
+
+        li {
+            list-style-type: none;
+            padding: 20px 23px;
+        }
+
+        section {
+            margin: 2px 230px;
+            display: flex;
+            flex-direction: column;
+            /*if not mention it then flex direction would be row since it is default and h1 will apper in a same row as p*/
+            /* border: 2px solid red; */
+            align-items: center;
+            /* now after giving the height the section content will not be in the middle of the section box. so to bring that in the middle of the section box. Use justify-content:center; */
+            height: 344px;
+            justify-content: center;
+            font-family: 'Annie Use Your Telescope', cursive;
+        }
+
+        section::before {
+            content: "this is before content";
+        }
+        section::after {
+            content: "this is after content";
+        }
+        header::before {
+            content: "";
+            background: url("https://images.unsplash.com/photo-1613336026275-d6d473084e85?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
+            position: absolute;
+            /* this will remove the black spacing */
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            /* this will make our image appear below the body and all  */
+            z-index: -1 ;
+            /* this will make my imafge appeear light */
+            opacity:0.5;
+        }
+
+        h1 {
+            font-size: 4rem;
+            
+        }
+
+        p {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <ul class="navigation">
+                <li class="item">home</li>
+                <li class="item">about</li>
+                <li class="item">services</li>
+                <li class="item">contact us</li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <h1>Welcome to coding world</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto necessitatibus dignissimos, autem quaerat eos
+            officia. Tempore a perferendis est tenetur deserunt eos eius!</p>
+    </section>
+    <!-- <hr> -->
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" >
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Box  Model</title>
+        <style>
+
+            /* so theres an extra selectorn css whose name is "universal selector below is the syntax" */
+            *{
+                box-sizing: border-box;
+                /* here we are taking by default margin as 0px */
+                /* if the container class in included then this below values will get overwritten by. if not included then by default all the elements will zero margin and padding*/
+                margin: 0;
+                padding: 0;
+            }
+            /* below is the body selector we have used this to give the background color to the whole background */
+            body{
+                    background-color:rgb(202 231 241);
+
+            }
+            .container{
+                background-color: rgb(218 198 227);
+                border: 4px solid purple;
+                /* this is the space between inside elements and border. if written like this it will apply in all the directions. so theres a way we can apply margin and padding in a particular way see below */
+                /* padding: 10px;. */
+                /* this is the space between whitespace and border. if written like this it will apply in all the directions. so theres a way we can apply margin and padding in a particular way see below */
+                margin:12px; 
+                  
+                /* padding-top: 50px; 
+                padding-bottom: 50px; 
+                padding-left: 50px; 
+                padding-right: 50px; 
+                
+                OR we can also apply this to the margin like below
+
+                margin-top: 50px;
+                margin-bottom: 50px;
+                margin-left: 50px;
+                margin-right: 50px;
+                Now there is a simpler technique to apply this margin/padding in a shorthand way see below*/
+
+
+                /* the padding and margin works both in top & bottom and left and right side . when applied like below*/
+
+
+                /* padding: 50px 40px 30px 20px ; */
+                /* this symbolises => padding: top right bottom  left ;*/ 
+                
+                
+                /*padding:y(top or bottom) x(left or right); */
+                /* this symbolises => padding: top/bottom  left/right ;*/   
+
+                padding: 20px 30px;
+                /* you can vary the above padding by using arrow keys in the inspect element in browser menu */
+
+                /* shorthand for the margin..is same as above ofr padding see below example */
+                margin : 9px 5px; /* now here 9px is margin in top bottom and 5px is margin in left right*/
+                 
+
+                border-radius: 23px;
+
+                width: 500px; /* now this is width of the background img. that that block is short in lenght beacuse of these width*/
+
+                /* IMP PROPERTY BOX SIZiNG property */
+
+                /* now look at the padding which i have written 30px on x axix...i go in inspect element and increase it...youll see that the width is also increaing. since the actual width of the element is the padding+margin+border etc.                                                                                                 but if we want this to not happen and our width shold be applicable as written then we use the property named as box sizeing. see below for the syntax. */
+                box-sizing: border-box;
+                /* now if change the padding of the element then width of the elemrnt inside the padding will get adjusted accordingly also changing margin will not change the width of the backgroung img  */
+
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h3>this is the heading</h3>
+            <p id="first">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam quidem dolorum animi, illum, totam dolore magnam, iure nemo incidunt reprehenderit vel inventore rerum.
+            </p>
+        </div>
+        <div class="container">
+            <h3>this is the heading</h3>
+            <p id="second">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam quidem dolorum animi, illum, totam dolore magnam, iure nemo incidunt reprehenderit vel inventore rerum.
+            </p>
+        </div>
+        <div class="container">
+            <h3>this is the heading</h3>
+            <p id="third">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam quidem dolorum animi, illum, totam dolore magnam, iure nemo incidunt reprehenderit vel inventore rerum.
+            </p>
+        </div>
+    </body>
+    </html>

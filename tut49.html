@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>js | stringds and strings method</title>
+    <style>
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <h1>Lorem ipsum dolor sit.</h1>
+
+        <!-- this will bring the h3 with the help of the javascript below wittrn -->
+        <div id="content"></div>
+
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit adipisci beatae sint cum perferendis maiores
+            rerum nostrum asperiores odit. Blanditiis maxime, quae aliquid rerum laudantium a fugit reprehenderit at
+            autem explicabo, quia nostrum facilis?</p>
+    </div>
+    <script>
+        // can also use double and single quotes for denoting string
+        // var string="this";
+        var string = 'this ';
+
+        // in this way we can use single and double quotes . its just like the python
+        var thisisastring = "hello my name is 'hardik maind' ";
+        console.log(string);
+        console.log(thisisastring);
+        var name = 'hardik maind';
+        var message = 'is a good boy';
+        // this is concatenation of the string
+        console.log(name + message);
+        var channel = 'code with harry';
+        // below we have used the backtrixed-" `` "
+
+        //here it   is called like fill in the blank///name and channel will fill the blanks. it is called the template . we can any specail character in it like the single and the double quotes.here  ${name} ${channel} are the template literal
+        var temp = `${name} is a nice person  and he has a channel ${channel}`;
+        console.log(temp);
+
+        // this will find the length of the string
+        var len = name.length;
+        console.log(`lenght of the name is ${len}`)
+
+        // escape sequences
+        console.log('hello world hehe\t huehue\n hu     \n      jsdfkjsfn // ehueh')
+
+        // string made with the help of string constructor
+        var y = new String("hello");
+        console.log(y);
+
+        //now here in the :"this is a h3 heading " will not have <h3></h3> tags ...it is js dom funtion. this will go in the div which has the content id. since we have used the .innerHTML.
+        document.getElementById('content').innerHTML = '<h3> this is a h3 heading</h3>'
+
+    </script>
+</body>
+
+</html>

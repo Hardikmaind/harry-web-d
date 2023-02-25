@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>interaction using alert confirm and prompt</title>
+    <style>
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        this is a page
+    </div>
+    <script>
+
+        // ALERT IN JS
+
+        //alert an in browser javascript.opens a modal window( its a type of window which doest not let to show or do anything to the whole website until, we close it )
+
+        // alert('this is a emergency message')
+
+
+        // it does not return anything. we have to 'ok' only. we check this by printing it
+        // let a=alert('this is a emergency message')
+        // console.log(a)
+
+
+
+        // PROMPT IN JS
+
+
+
+
+        // here guest is the default argument. if default argument is not returned then prompt will be blanked
+        // let name=prompt('what is ur name?','guest');//here we have sved the prompt in name variable
+        // console.log(name)
+
+
+        // CONFIRM IN JS
+
+
+        //confirm is used to double check on teh user . for ex if he wants to delete file and record ..or he wants to save the changes etc
+        let deletepost = confirm('do u really want to delete this post?')
+        // console.log( deletepost)//if selected ok then true will return . if selected cancel then it will return false
+        if (deletepost) {
+            // here your code to delete post will come
+            console.log("your post has been deleted successfully")
+        }
+        else {
+            // here your code to cancel deletion of post will come
+            console.log('your post has not been deleted ')
+        }
+
+
+    </script>
+</body>
+
+</html>

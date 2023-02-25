@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" >
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>css fonts</title>
+        <!-- this or below writeen in line 14-16...we can do it in both ways...just remember to write font stack correctly-->
+        <!-- 
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet"> 
+        
+        -->
+    </head>
+    <!-- done this by importing the external css from google font ..or we can also input same url by inputng it as external css as link in above head tag -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+    </style>
+    <style>
+        p{
+            /* this is font stack ..
+            Specifies a prioritized list of font family names or generic family names. A user agent iterates through the list of family names until it matches an available font that contains a glyph for the character to be rendered. */
+            font-family: 'Roboto Mono', monospace, Arial, Helvetica, sans-serif;
+            /* pixel is 1/96th size of the inch */
+            /* there should be no space between number and "px" or it will be considered as one */
+            font-size:40 px;
+            /* this is font size ...we have creatred element selected*/
+            line-height: 5em;
+            
+        }
+        span{
+            font-weight: bold ; 
+            font-style: italic;
+        }
+    </style>
+    <body>
+        <div>   
+            <!-- we can apply particular prop by using spam tag -->
+            <p>hi there  <span> 123 hewllk there 12 </span>hello helo hello  watcha doin</p>
+            <p>hello there</p>
+        </div>
+    </body>
+    </html>

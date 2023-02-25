@@ -1,0 +1,102 @@
+<!-- lists and tables -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>tables and lists</title>
+  </head>
+
+  <body>
+    <!-- first we will know about the lists  -->
+    <h1>html lists</h1>
+    <ul>
+      <li>this is the first item of my unordered lst</li>
+      <li>this is the second item of my unordered lst</li>
+      <li>this is the third item of my unordered lst</li>
+      <!-- to duplicate line up and down..use short cut shift+alt+up or shift +alt+down -->
+    </ul>
+    <hr />
+    <ul type="circle">
+      <!-- such type of list has many attributes for examples disc ,square,circle.these are the indexing, youll get the attributes while searching on the internet  -->
+      <li>this is the first item of my unordered lst</li>
+      <li>this is the second item of my unordered lst</li>
+      <li>this is the third item of my unordered lst</li>
+      <!-- to duplicate line up and down..use short cut shift+alt+up or shift +alt+down -->
+    </ul>
+    <hr />
+    <ol>
+      <!-- such type of list has many styles for examples see  -->
+      <li>this is the first item of my ordered lst</li>
+      <li>this is the second item of my ordered lst</li>
+      <li>this is the third item of my ordered lst</li>
+      <!-- to duplicate line up and down..use short cut shift+alt+up or shift +alt+down -->
+    </ol>
+    <hr />
+    <ol type="I">
+      <!-- such type of list has many attributes for examples I,A,a,1..these are the indexing  -->
+      <li>this is the first item of my ordered lst</li>
+      <li>this is the second item of my ordered lst</li>
+      <li>this is the third item of my ordered lst</li>
+      <!-- to duplicate line up and down..use short cut shift+alt+up or shift +alt+down -->
+    </ol>
+    <hr />
+    <!-- we can also do nesting of the list for example... -->
+    <ol>
+      <li>this is the first item of my ordered lst</li>
+      <li>this is the second item of my ordered lst</li>
+      
+        <ol>
+          <li>hello there one</li>
+          <li>hello there two</li>
+          <li>hello there three</li>
+          <ul>
+            <li>hello there one</li>
+            <li>hello there two</li>
+            <li>hello there three</li>
+            <li>hello there four</li>
+          </ul>
+        </ol>
+      </li>
+      <li>this is the third item of my ordered lst</li>
+    </ol>
+    <hr />
+
+    <!-- now lets learn about tables -->
+    <h2>Html Tables</h2>
+    <!-- below is the table tag, inside it there are two tags,table head and table body -->
+    <!-- <tr>  </tr> is a  tag for row -->
+    <!-- th is a tag for table heading -->
+    <!-- td is a tag for table data -->
+
+    <table>
+    <!-- in html we have to enter data by entering rows. first goes headng row..then all the other data rows in the table body tag -->
+      <thead>   <!--this is a heading of table,data in this will automatically get bolded -->   
+        <tr>
+          <th>Name <hr></th>
+          <th>employee id <hr></th>
+          <th>employee role <hr> </th>
+          
+        </tr>
+      </thead>
+      <tbody>   <!--this is a body of table, we have to enter data in it row wise-->
+        <tr>
+          <td>harry khan <hr></td>
+          <td>12312341 <hr></td>
+          <td>ceo <hr></td>
+        </tr>
+        <tr>
+          <td>shravani akude <hr></td>
+          <td>12312341 <hr></td>
+          <td>cfo <hr></td>
+        </tr>
+        <tr>
+          <td>hardik maind <hr></td>
+          <td>12312341 <hr></td>
+          <td>owner <hr></td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

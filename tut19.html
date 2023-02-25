@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" >
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>height wridht borders and backgrounds</title>
+        <style>
+            #firstpara{
+                background-color:rgb(208, 163, 163);
+                /* sets the height of the bg color */
+                height : 100px;
+                /* sets the width of the bg color */
+                width:405px; 
+                
+                
+                /* border-width: 4px;
+
+                if color of the border si not given then it is automaticaaly taken as black
+
+                border-Color:rgb(67, 48, 237); 
+
+                border style giving is compulsory since if not gievn it will not show the border
+
+                border-style: solid;
+
+                if i want to make the borders curvy and not sharp then use the border-radius: 
+                
+                border-radius: 10px; 
+
+                now since we have written this in separate separate form so if i have to write it collective...i will write it like this see below syntax is  border:boderwidth borderstyle bordercolor */
+                
+                border: 4px solid green; 
+
+            }
+
+            #secondpara{
+                background-color:rgb(29, 211, 214);
+                /* sets the height of the bg color */
+                height : 100px;
+                /* sets the width of the bg color */
+                width:405px;
+                /* if i dont wont to the border to look like same from above below anf left and right then i can use below technique */
+                border-top:6px solid rgb(214, 115, 115);
+                border-right:6px solid rgb(0, 0, 0) ;
+                border-left:6px solid rgb(238, 0, 36) ;
+                border-bottom:6px solid rgb(36, 232, 98) ;
+                /* this is for specifying from which individaul corner the border will be curved we can do it individually */
+                border-top-right-radius:116px  ;
+                border-top-left-radius:6px  ;
+                border-bottom-right-radius:6px  ;
+                border-bottom-left-radius:6px  ;
+                
+            }
+            #thirdpara{
+                color: rgb(0, 0, 0);
+                /* now instead of putting the bg color always we can also put bg image below is the syntax */
+
+                /* background-image: url(tut13-2.jpg); */
+
+                /* or we can also take the img from the internet like below */
+                background-image: url('https://yt3.ggpht.com/ytc/AMLnZu8dZQJYCt6Ffcd-pl113huuo_HJ3PpvgkyFk5FkrQ=s176-c-k-c0x00ffffff-no-rj');
+                /* sets the height of the bg color */
+                height :300px;
+                /* sets the width of the bg color */
+                width:500px;
+                border:4px solid brown;
+                /* "repeat-x" and "repeat-y" will make it repeat x time and y times respetively */
+                /* no-repeat will make it repeat zero times */
+                background-repeat: no-repeat;
+                /* now positoning the background imgs. below are the commented ways in which we can position our background img  */
+
+                /* i had written the below commancds all at once and i observed that the command which is written at the bottom only executes */
+
+                /* background-position:center center;
+                background-position:center top;
+                background-position:center bottom;
+                background-position:center left ;
+                background-position:center right;
+                background-position:top left ;
+                background-position:top right ;
+                background-position:bottom left ;
+                background-position:12px top ;
+                background-position:12px 56px  ;
+                */
+                background-position:bottom right ;
+
+
+                
+            }
+
+        </style>
+    </head>
+    <body> 
+        <h3>this is the heading</h3>
+        <p id="firstpara">this is the first paragraph </p>
+        <h3>this is second heading</h3>
+        <p id="secondpara">this is the second paragraph </p>
+        <h3>this is third heading</h3>
+        <p id="thirdpara"><strong> <em>this is the third paragraph</em> </strong>  </p>
+        
+    </body>
+    </html>

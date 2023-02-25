@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>visibility and z index</title>
+    <style>
+        /* z-index does work for all the postions except for the static postion*/
+
+        /* in case of overlapping element ..whoever has in value of z-index more will be be on top of other element . see below for the example */
+
+        /* When the z-index property is not specified on any element, elements are stacked in the following order (from bottom to top): The background and borders of the root element. Descendant non-positioned elements, in order of appearance in the HTML. Descendant positioned elements, in order of appearance in the HTML.
+            
+            matlab jo html mein baad mein likhe hain wo upar ayenge
+            
+            agar z index specified hain toh..jiska z-index bada woh uper dikhega*/
+
+
+        .box {
+            width: 170px;
+            height: 170px;
+            border: 2px solid black;
+        }
+
+        #box1 {
+            background-color: green;
+        }
+
+        #box2 {
+            background-color: red;
+            /* this below is the default value of visibilty */
+            /* visibility: visible; */
+
+            /* this will hide the element, but its space will be reserved */
+
+            /* visibility: hidden; */
+
+            /* this will hide the element and also remove the space it has reserved */
+
+            /* display: none; */
+            position: relative;
+            top: 40px;
+        }
+
+        /*in the below box 3 and box 4 are overlappeing but   */
+
+
+        #box3 {
+            background-color: violet;
+            position: relative;
+            top: 51px;
+            z-index: 1;
+
+        }
+
+        /* since z index of box3 is greater than the z-index of box4 ..box 3 will appear above the box 4 */
+        #box4 {
+            background-color: blue;
+            position: relative;
+            top: 0px;
+            z-index: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- .box#box$*4 . here dollar is for differentiating the ides..ie give them number form 1 -->
+    <div class="box" id="box1"></div>
+    <div class="box" id="box2"></div>
+    <div class="box" id="box3"></div>
+    <div class="box" id="box4"></div>
+</body>
+
+</html>

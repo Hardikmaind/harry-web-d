@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" >
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>CSS transform property</title>
+        <style>
+            *{
+                /* this will remove the empty space between the continer and the browser(overwrites the default property) */
+
+                margin: 0px;
+                padding: 0px;
+            }
+            .container{
+                display: flex;
+                height:80vh;
+                align-items: center;
+                justify-content: center;
+                background-color: burlywood;
+            }
+            .box{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: brown;
+                border:2px solid red;
+                border-radius: 8px;
+                height:200px;
+                width:200px;
+                /* this will rotate the box by 45 deg. we can also apply the prop in hover and apply some transition to it */
+
+                /* transform:rotate(45deg); */
+
+                transition: transform 0.2s ease-in-out 0.0s;
+            }
+            .box:hover{
+                /* transform:rotate(360deg); */
+
+                /* this will tilt the box by 40deg */
+                /* transform:skew(40deg); */
+
+                /* this will increse the size by 1.2X */
+                /* transform:scale(1.2); */
+
+                    
+                /* this will shift the size of the box by 22px */
+                /* transform:translateX(122px); */
+                    /* or */
+                /* transform:translateY(122px); */
+                /* for translating in x and y direction use only translate */
+                transform: translate(122px,122px);
+
+
+
+            }
+        </style>
+    </head>
+    <body>
+         <div class="container">
+            <div class="box">
+                this is the box
+            </div>
+         </div>
+    </body>
+    </html>

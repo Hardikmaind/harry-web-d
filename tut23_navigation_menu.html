@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" >
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>creating Navigation menu</title>
+        <style>
+            .navbar {
+                background:#4d0465;
+                border-radius:39px;
+            }
+            .navbar li{ 
+                /* this below float will make the all the list attributes like{home about etc} in a horizontal manner.Now, After including this(float:left;) the backgroung color will get overflown from the parent(navbar) so target the ul in the navbar class and use the command overflow auto */
+                float: left;    /*ONE QUESTIION ? DOES AFTER FLOATING DO THE ELEMENTS BECOME INLINE BLOCK*/
+                /* this below is used to remove the bullet */
+                list-style-type: none;
+                margin: 15px 13px;
+                
+                
+
+
+                /* we have applied all the below attributes to the below .navbar li a{} */
+
+                /* padding: 5px 3px;    5 in vertical and 3 in horizontal 
+                border: 3px solid black;
+                margin: 5px 5px;
+                 set width 66px and see home you will diff between setting width as in px and setting it as auto. By writing width auto..only that much space(width) is given to each of element which each of one requires individually, not a fixed space(width ).here  
+                width:auto;   */
+            }
+            /* this below implies . that css style will take effect only in "a"  which is written in li which is inturn written in navbar class */
+            .navbar li a{
+                padding: 13px 5px;
+                /* we gotta remove the underline since we included the anchor tag so for that see */
+                text-decoration: none;
+                color:white;
+
+            }
+            /* below written implies that  a written inside li written inside navbar . this is only where this effect will take place */
+            .navbar li a:hover{
+                /* this below will change the background color only*/
+                /* background:#fffefe; */
+                /* this below will change the font color */
+                color: rgb(252, 7, 7);
+            }
+            .navbar ul{
+                /* After including this(float:left;) the backgroung color will get overflown from the parent(navbar) so target the ul in the navbar class and use the command overflow auto */ 
+                /* this will bring back the color back which was overflown from the parent i.e navbar */
+                overflow: auto;
+            }
+            .search{
+                float: right;
+                color: white;
+                padding: 15px 58px;
+                
+            }
+            /* we can also write below as .navbar input since there is only one input in navbar */
+            .navbar div input{
+                border: 3px solid black;
+                border-radius: 11px;
+                padding: 2px 2px;
+                width: 129px;
+                
+            }
+            .navbar div button{
+                float: right;
+                color:  black;
+                padding: 2px 8px;
+                border: 3px solid black;
+                border-radius: 11px;
+            }
+            .navbar div button:hover{
+                cursor: pointer;
+                background-color: rgb(119, 238, 119);
+                color: red
+            }
+
+            
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar">
+                <ul>
+                    <li><a>home</a> </li>
+                    <li><a>About</a> </li>
+                    <li><a>Services</a> </li>
+                    <li><a>contact us</a> </li>
+                    <div class="search">
+                        <!-- "beside is the seach box". if anything appears next to search box it will appear beside it  -->
+                        <input type="text" name="seach" id="search" placeholder="Search this website">
+                        <button class="btn" type="submit" >search</button>
+                    </div>
+                </ul>
+            </nav>
+        </header>
+    </body>
+    </html>

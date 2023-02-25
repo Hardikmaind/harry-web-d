@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>pseudoselector/pseudoclass amd more designing</title>
+    <style>
+        /* Note: a:hover MUST come after a:link and a:visited in the CSS definition in order to be effective! a:active MUST come after a:hover in the CSS definition in order to be effective! Pseudo-class names are not case-sensitive. */
+
+        .container {
+            border: 2px solid red;
+            background-color: rgb(244, 201, 201);
+            padding: 34px;
+            margin: 34px auto;
+            width: 656px;
+        }
+
+        a {
+            /* this will remove the underline in the hyperlink */
+            text-decoration: none;
+        }
+
+        /* this is also a pseudo selector. here visitor means. the element which has been visited will show differently(will have diff css style) after visited*/
+
+        /* (after clicking on the element it will chage the color permanently..to again see the original color change the elements webiste link ..so in this way this new website becomes unvisited)  */
+        a:visited {
+            color: blue;
+            background-color: rgb(231, 65, 212);
+        }
+
+        /* this is a pseudo selector. here a hover means when hovered over the element here "a". its css styles changes*/
+        a:hover {
+            /* this changes the color(from white to red) and the background color(from blue to yellow)when hovered over the <a> element */
+            color: red;
+            background-color: rgb(221, 242, 156);
+        }
+
+        /* this is also a pseudo selector. here active means. the element which has been activated(that means pressed) will show differently(will have diff css style) after visited*/
+        a:active {
+            background-color: #fff;
+            /* we can also add shadow to the pressed button */
+            box-shadow: 2px 2px 5px #fc894d
+        }
+        button:hover{
+            background-color: white;
+            color:black;
+        }
+
+        .btn {
+            background-color: rebeccapurple;
+            padding: 6px;
+            /* this removes the border */
+            border: none;
+            /* when hoverd to any of element  which has  class ".btn" in it . it will show cursor. to have this we use the cursor property*/
+            cursor: pointer;
+            font-size: 18px;
+            border-radius: 4px;
+            /* to change the color of the text on button use ...color property like below */
+            color: rgb(243, 233, 233);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container" id="cont1">
+        <h3>this is my headings</h3>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, vitae?
+            Eveniet quod animi quidem qui maiores pariatur autem facere inventore
+            delectus! Voluptatum, illum corporis ex temporibus minima molestiae,
+            quod blanditiis quaerat velit quasi nulla?
+        </p>
+        <a href="https://google.com" class="btn">read more</a>
+        <button class="btn">contact us</button>
+    </div>
+</body>
+
+</html>

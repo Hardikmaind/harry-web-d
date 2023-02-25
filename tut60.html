@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Arrow Functions</title>
+</head>
+
+<body>
+    <div class="container">
+        This is arrow functions tutorial.
+    </div>
+    <script>
+        // Arrow function
+        // let greet =  ()=> {
+        //     console.log('Good morning');
+        // }
+
+        // arrow function without parameter..and printng in console with the help of console.log
+        let greet = () => console.log('Good morning');
+
+
+        // let sum2 = (a, b)=>{
+        //     return a+b;
+        // };
+
+        // arrow funtion with 0 or more than 2 arguments need to be in bracket
+        let sum2 = (a, b) => a + b;
+        // arrow fuction with 1 parameter does not need bracket
+        let half = a => a / 2;
+
+        // function greet() {
+        //     console.log('Good morning');
+        // }
+
+        // here called the greet function
+        greet();
+        setTimeout(() => {
+            console.log("We are inside settimeout");
+        }, 3000);
+
+        let obj1 = {
+            greeting: "Good Morning",
+            // this is example of array in an object
+            names: ["Harry", "Rohan", "SkillF", "DjKhiladi"],
+            //this is example of funtion in a object
+            speak() {
+                // here for each loop applied on names with the help of 'this' keyword
+                this.names.forEach((student) => {
+                    // since we have used the arrow funtion. the 'this' keyword used inside the arrow funtion will be associated with the object,this is also called as Lexical this. but when used the normal funtion, the 'this' keyword inside the function refers whaterver inside the function
+                    console.log(this.greeting + " Kukdoo Koo " + student);
+                });
+            }
+        }
+        obj1.speak();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Forms</title>
+  </head>
+
+  <body>
+    <h2>This is HTML forms tutorial</h2>
+    <!-- for writing form just just write form and press tab..toull get the below(backend wali) template already -->
+    <!-- here in action we will write our backend...where all the data of our form will be present -->
+    <form action="backend.php">
+      <!-- this below name tag ...associate with our name block..see in the comments how was it writtes at first and how it is written now{Name:<input type="text" name="myName" " />...without label tag itis written like this}...one thing must be rembererd that the id and for attritbute content should be same. what does this label tag do?--if we clicked on the name tag in our website our cursor directly goes on to the name block space .
+        
+        The name attribute specifies the name of an <input> element. The name attribute is used to reference elements in a JavaScript, or to reference form data after a form is submitted.    Note: Only form elements with a name attribute will have their values passed when submitting a form.
+      -->
+      <label for="namename"> Name:</label>
+
+      <!-- this is the div tag..it works as a separating block,instead of using br tag, br tag is not recommended to be used so often -->
+      <div>
+        <!-- this is the input tag it is used for getting the input of the user -->
+        <input type="text" name="myName" id="namename" value="enter your name" /> <!--The value attribute specifies the value of an <input> element.
+
+          The value attribute is used differently for different input types:
+          
+          For "button", "reset", and "submit" - it defines the text on the button
+          For "text", "password", and "hidden" - it defines the initial (default) value of the input field
+          For "checkbox", "radio", "image" - it defines the value associated with the input (this is also the value that is sent on submit)
+
+          Note: The value attribute cannot be used with <input type="file">.-->
+
+          
+        <!-- Name:<input type="text" name="myName" " />...without label tag itis written like this -->
+      </div>
+      <!-- br is not recommanded -->
+      <br >
+      <div>
+        <label for="role">role:</label>
+        <!-- this is the input tag it is used for getting the input of the user(FIR GETTING ROLE) -->
+        <input type="text" name="myrole" id="role" />
+      </div>
+      <!-- br is not recommanded -->
+      <br/>
+      <div>
+        <label for="email">Email:</label>
+        <!-- this is the input tag it is used for getting the input of the user, in here our autocomplete writes automatically email type type after writing email and input -->
+
+        <!-- name is tag which the backend.php will recognize the below tag,when this form is submited,then in backend , there will be a feature in which values corresponding to myname,myrole,myemail can be taken-->
+        <input type="email" name="myemail" id="email"  placeholder="enter your email address" />
+        <!--place holder is used to specify the content in the box. when you enter in  that box the text writteen in the placeholer diappear. value and placehoder are different atteributes-->
+      </div>
+      <br >
+
+      <div>
+        <label for="date">Date:</label>
+        <input type="date" name="mydate" id="date" /></div>
+      <br >
+      <div>
+        <label for="bonus">Bonus:</label>
+        <input type="number" name="mybonus " id="bonus" /></div>
+      <br >
+      <div>
+        <label for="eligible"></label>
+        <!-- these are the checkbox -->
+        are you eligible? :yes <input type="checkbox" name="eligibility" id="eligible" /> i
+        want to be <input type="checkbox" name="eligibility" id="" checked />
+        <!-- above checked attribute keeps our check box checked by default  -->
+      </div>
+      <br >
+      <div>
+        
+        <!-- these are the radio buttons -->
+        <!-- here since the name of both is same ..we will be able to select one radio buttuon only of eihter of the buttons -->
+        gender: male<input type="radio" name="gender" /> female<input type="radio" name="gender" />  dont want to specify<input type="radio" name="gender" />
+      </div>
+      <br >
+      <div>
+        <label for="comment">write comments: <br /></label>
+        <!-- this is different tag named "textarea" is used to insert the empty textarea in our webpage -->
+        <textarea name="mytext" cols="30" rows="10" id="comment"></textarea>
+
+      </div>
+      <br >
+      <div>
+        <label for="car">car </label>
+        <!-- select tag i used to add drop box menuto our website -->
+        <select name="mycar" id="car" >
+          <!-- option tag is used to add diff options to our dropbox menu. these are all inside the select tag -->
+          <option value="indica">indica</option>
+          <option value="nano">nano</option>
+          <option value="swift">swift</option>
+          <!-- here selected is written cause it dafaultly selects kia as the value -->
+          <option value="kia" selected>kia</option> 
+        </select> 
+      </div>
+      <br>
+      <div>
+        <!-- now since th input is taken we will submit the form with the following instructions -->
+        <!-- type="sumbit"will give us a submit button.its default name is submit. we have changed it with the value attribute -->
+        <input type="submit" value="submit now" />
+        <!-- below -is the reset tag it is used to reset evrything written in our form . it gives us the reset button. its default name is reset. we have changed it with the value attribute-->
+        <input type="reset" value="reset now" />
+      </div>
+      <br />
+      <!-- this is form closing tag -->
+    </form>
+  </body>
+</html>
+
+
+
+
+

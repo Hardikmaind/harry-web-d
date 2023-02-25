@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" >
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>css grid</title>
+        <style>
+            .container{
+                display:grid;
+                grid-gap:1rem ;
+                /* grid-template-columns: 113px 112px 112px; */
+                /* grid-template-columns:1fr 1fr 1fr; */
+                /* this will make the content center in the x axis */
+                /* justify-content: center; */
+
+                    /* this will make the content responsive. here minmax means when there can be only on fit then the width will be 300px(i.e min) . when there is plcae for more than one grid item then width will be 1 fr(i.e max)  */
+                grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+                
+            }
+            .box{
+                border:2px solid black;
+                background-color: blanchedalmond;  
+                padding:34px;
+            }
+        </style>
+    </head>
+    <body>
+         <div class="container">
+            <div class="box">item-1</div>
+            <div class="box">item-2</div>
+            <div class="box">item-3</div>
+            <div class="box">item-4</div>
+            <div class="box">item-5</div>
+            <div class="box">item-6</div>
+            <div class="box">item-7</div>
+            <div class="box">item-8</div>
+            <div class="box">item-9</div>
+            <div class="box">item-10</div>
+            <div class="box">item-11</div>
+            <div class="box">item-12</div>
+            <!-- lets assume an another item . item 13. now if we want this only item to be in centre when we have made the website resosive. then we need to write css for this item alone and different -->
+            <div class="box">item-13</div>
+            
+         </div>
+    </body>
+    </html>

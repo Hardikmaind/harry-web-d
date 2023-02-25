@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Inline and Block elements</title>
+</head>
+<body>
+    <strong style="border: 2px solid red;">this is a paragraph</strong> <a style="border: 2px solid blue;">
+        this is also a paragraph</a>
+
+        <!-- since span is an inline element below will come in single line even after writing in another line -->
+    <span style="border: 2px solid red;">this is a span</span> 
+    
+    <span style="border: 2px solid red;">this is also a span</span>
+    
+    <br>
+
+    <!-- em is a inline tag -->
+    <!-- li is block tag -->
+    <!-- img is a inline tag -->
+
+
+    <img src="https://source.unsplash.com/random" alt="not visible" </img><img src="https://source.unsplash.com/random" alt="not visible"></img>
+</body>
+</html>
+
+<!-- If we write any text in the paragraph tag like this-
+
+<p>This is a paragraph</p>
+
+<p>This is also a paragraph</p>
+OR
+
+<p>This is a paragraph</p> <p>This is also a paragraph</p>
+
+
+In both the above examples, we will see the output in both different lines, not in the same line. We want both the texts in the same line but it is not so. Can you think why?
+
+It is because the paragraph tag is a block element. The Block element means that it will take the full width of a single line and does not allow any other content to fit in it. But, if we write both the texts between the <span> tags like-
+
+<span>This is a paragraph</span> <span>This is also a paragraph</span>
+Then we see that both the texts will appear in the same line. It is because the <span> tag is an inline element. It allows all the elements in the same line.
+
+To understand it more, we can take the help of CSS by applying the border. However, you need not worry about the border as it is a part of CSS. I’m using this just for the case of an example. 
+
+<p style= “border: 2px solid, red;”>This is a paragraph</p> <p style= “border: 2ox solid blue;”>This is also a paragraph</p>
+
+<span style= “border: 2px solid red;”>This is a span</span> <span style = “border: 2px solid red;”>This is also a span</span>
+After testing the above code in the live server, you will know the main difference between inline and block elements.
+
+
+
+The above example shows how inline elements will take only its portion of text whereas the block element will take the whole width of the line. You will understand it more with the help of different colours through CSS. Anchor <a> tags also behaves like an inline element. 
+
+We have two different options of making our text appear in a single line. The first one is either with the help of CSS through borders or with the help of inline elements. As we have reached the end of this tutorial, I want you to find out whether li, em, div is inline or block elements. 
+
+So, I believe till now you must have understood the major difference between Inline and Block elements. Stay with the course to learn more things in this complete web development Bootcamp.
+
+Code as described/written in the video
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Inline and Block elements</title>
+</head>
+<body>
+    <strong style="border: 2px solid red;">this is a paragraph</strong> <a style="border: 2px solid blue;">
+        this is also a paragraph</a>
+    <span style="border: 2px solid red;">this is a span</span> <span style="border: 2px solid red;">this is also a span</span>
+
+    li, em, div, img
+</body>
+</html> -->

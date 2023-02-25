@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" >
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Js settimeout and cleartimeout</title>
+        <style>
+        </style>
+    </head>
+    <body>
+
+        <!-- when used the  first.innerHTMl it will target all the inside element..for exampple here #second ,#third etc -->
+        <!-- when used the  first.outerHTMl it will target all the  element..for example here #first (also) #second ,#third and all etc -->
+        <div id="first">
+            <div id="second">
+
+            </div>
+            <div id="third">
+
+            </div>
+        </div>
+
+
+
+        <div class="container">
+            Time is now <div id="time"></div>
+        </div>
+        <script>
+            console.log('this is tut 58')
+            // setTimeout--> Allows us to run the function once after the interval of time
+            // clearTimeout--> Allows us to run the function repeatedly after the interval of time
+
+            function greet(){
+                console.log('hello good morning')
+            }
+            // here the first argument is the funtion name and the second argument is the time in ms
+            setTimeout(greet, 3000);
+
+            console.log(' ')
+
+            // here the argument in the funtion is passed as the third argument in the setimeout method
+            function greet2(name,comment){
+                console.log('hello good morning '+name +" "+comment)
+            }
+            // here the first argument is the funtion name and the second argument is the time in ms, and the argument after that are passed to funtion as strings, in name and comment etc
+
+            setTimeout(greet2, 5000,'hardik','take care bhai');
+            
+            //in setTimeout we dont have to call the funtions..we just have to state its funtion name. therefore this brlow is wrong . and it doesnt execute after 2 sec.  it executes immediately
+            // setTimeout(greet2(),2000);
+
+            // this timeout variable stores  unique id of the setTimeout. below set timeout has '2' as id
+            let timeout =setTimeout(greet2, 5000,'hardik','take care bhai');
+            console.log(timeout)
+            //here 
+            clearTimeout(timeout)
+            // this abouve setTimeout id(timeout) is used to clear the settimeout. then we use clearTimeout(2), here 2 is the id of the timeout which we have to clear
+
+            // here undefined comes because we have passed the 'name' and the 'hue'
+            // setInterval(greet2, 1000);
+            // this below variable store the interval id.
+            intervalid=setInterval(greet2, 1000);
+            // when setInterval(greet2, 1000); runs..then clearInterval(intervalid) happens. so the function greet2 doesnt repeat after the interval
+            clearInterval(intervalid)//this is used to clear the seted interval. 
+
+
+
+            function displaytime(){
+                time=new Date();
+                console.log(time);
+                // this below line means. it will access the time id from the dom(inner html) and will give time to it.which inturn stores date(). and u can see in the above line we have consoli.log(time). so this is it.
+                document.getElementById('time').innerHTML=time;
+            }   
+            // because of below display time funtion executes repeatedly after 1000ms
+            setInterval(displaytime,1000)
+
+            // if nothing  is written like let,var and const. then variable becomes global. see below
+            // a='jhardik'
+            // console.log(a)
+        </script>
+
+    </body>
+</html>

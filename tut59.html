@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" >
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Js|date and time</title>
+        <style>
+            .container{
+                font-size: 23px;
+                color: blanchedalmond;
+                border: 2px solid grey;
+                padding: 34px;
+                margin: 4px;
+                text-align: center;
+                background-color: black;
+            }
+            #time{
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            this is a container
+            current time is   <span id="time">  </span>
+        </div>
+        <script> 
+        console.log('this is date and time tutorail')
+        // here now is the object and darte is the constructor
+        let now =new Date();
+        console.log(now)
+        
+        
+        let dt =new Date(0);//by writing here 0 it will give us the reference time. and if if type 1000,then it willgive us 1sec from the reference time
+        console.log(dt)
+        
+        // let newdate =new Date("2029-11-09");//this will give us the date and the day of the date mentioned
+        // console.log(newdate)
+
+        
+        // let newdate =new Date(year ,month,date,hours,minutes,seconds,miliseconds);
+        let newdate=new Date(3020,4,9,3,56,32,34)
+        console.log(newdate)
+
+        //these are some funtions
+        let yr=newdate.getFullYear()
+        console.log('the year is',yr)
+        let date=newdate.getDate()
+        console.log('the date is',date)
+        let month=newdate.getMonth()
+        console.log('the month is',month)
+        let day=newdate.getDay()
+        console.log('the date is',day)
+        let hours=newdate.getHours()
+        console.log('the hours is',hours)
+        
+        console.log("")
+
+
+        // also we can change the date,yr,month,hr etc
+        newdate.setDate(5)  //if we put date here 34,then itwill auto correct it into is next month
+        console.log(newdate)
+        newdate.setHours(12)
+        console.log(newdate)
+
+        // this will show the current time stamp from the begining of the time
+        let current_time_stamp=Date.now()
+        console.log(current_time_stamp)
+
+            setInterval(updatetime, 1000);
+            function updatetime(){
+                // here id of span is "time"
+                time.innerHTML=new Date()
+            }
+        </script>
+    </body>
+</html>

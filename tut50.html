@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>javascript|string function</title>
+    <style>
+    </style>
+</head>
+
+<body>
+
+    <script>
+        var str = 'this is a string';
+        console.log(str);
+
+        //this will give the first occurance of the substring in indexOf method
+        var position = str.indexOf('is');
+        console.log(position);
+
+        // also we dont need to specify the var everytime of the variable. if we have specifiedd it once . then that is eough
+
+        //this will give the last occurance of the substring in indexOf method
+        position = str.lastIndexOf('is');
+        console.log(position);
+
+        // substring from a string
+
+        // slice can also take the negative values
+        var substr1 = str.slice(1, 7);
+
+        // substring cannot take the negative values
+        var substr2 = str.substring(1, 7);
+        console.log(substr1);
+        console.log(substr2);
+
+        // this means that 1 se start karo and 5 tak chalo and output do. substr(start from which index,how much characters to take)
+        var substr3 = str.substr(2, 5)
+        console.log(substr3);
+
+        // this funtion will repalce the particular part in the original string
+        var replaced = str.replace('string', 'harry');
+        // this is the original string
+        console.log(str);
+        // this is the replaced string  
+        console.log(replaced);
+
+        // this will make strimg in a uppercase
+        console.log(str.toUpperCase());
+
+        // this will make string  in lower case
+        console.log(str.toLowerCase());
+
+        // this is used to concat the string.this will concat str with "hello how are you"
+        var newstrimg = str.concat(' hello how are you')
+        console.log(newstrimg)
+
+        var strwithwhitespaces = '                this contains           whitespaces             ';
+        console.log(strwithwhitespaces)
+        // this will remove the white spaces from starting and behind
+        console.log(strwithwhitespaces.trim());
+
+        // this will give output of the 3rd character
+        var char3 = str.charAt(2);
+        console.log(char3)
+
+        // charcode funtiong gives the char code.utf 16 charcode
+        var char = str.charCodeAt(2);
+        console.log(char)
+
+        //String Slicing. this will give 3rd element of the str
+        console.log(str[3])
+    </script>
+</body>
+
+</html>

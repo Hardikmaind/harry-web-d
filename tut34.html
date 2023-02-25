@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>box shadow and text shadow</title>
+    <style>
+      .container {
+        display: flex;
+      }
+
+      .card {
+        padding: 23px 12px;
+        margin: 23px 12px;
+        /* border: 2px solid red; */
+        background-color: burlywood;
+
+        /* box-shadow: offset-x offset-y color; */
+        /* box-shadow: offset-x offset-y blur-radius color; */
+        /* box-shadow: offset-x offset-y blur-radius spread-radius color; */
+
+        /* postive values for top-left corner shadow*/
+        /* box-shadow:  3px 3px rgb(0, 16, 0) ; */
+        /* negative values for bottom-right corner shadow*/
+        /* box-shadow: -3px -3px rgb(222, 4, 4) ; */
+
+        box-shadow: 4px 4px 10px rgb(222, 4, 4); /*here 10px is the blur radius*/
+
+        box-shadow: 4px 4px 10px 8px rgb(222, 4, 4); /*here 8px is the spread radius*/
+
+        /* box-shadow: -7px -5px 10px 34px rgba(71, 172, 172, 0.5); ; here 0.5(a for alpha decides the darness of the shadow)*/
+
+        /* box-shadow: inset 3px 5px green;this will take shadow inside the box */
+
+        /* this is for the multiple shadow */
+        box-shadow: 3px 5px green, 14px 16px red;
+
+
+      }
+      .card h2{
+        /* text-shadow: 3px 4px white; */
+        /* text-shadow: 3px 4px 6px white; here 6px is the blur */
+        text-shadow: -3px -4px 6px white; /*here 6px is the blur*/
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="card" id="card1">
+        <h2>this is cpp course</h2>
+        <p>
+          i have started the cpp course which does not mean that we will stop this course Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque
+          accusamus voluptas commodi ab error, est repellat quo autem similique
+          porro natus quia. Ipsum recusandae corporis, tenetur nesciunt alias
+          odio? Eligendi architecto vitae dolores libero!
+        </p>
+      </div>
+      <div class="card" id="card2">
+        <h2>this is html code</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque
+          accusamus voluptas commodi ab error, est repellat quo autem similique
+          porro natus quia. Ipsum recusandae corporis, tenetur nesciunt alias
+          odio? Eligendi architecto vitae dolores libero!
+        </p>
+      </div>
+      <div class="card" id="card3">
+        <h2>card3</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque
+          accusamus voluptas commodi ab error, est repellat quo autem similique
+          porro natus quia. Ipsum recusandae corporis, tenetur nesciunt alias
+          odio? Eligendi architecto vitae dolores libero!
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

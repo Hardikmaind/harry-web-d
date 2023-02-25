@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>position absolute,relative,fixed & sticky (positon property of css)</title>
+    <style>
+        
+        body {
+            background-color: rgb(157, 151, 151);
+            height: 5000px;
+        }
+
+        .container {
+            border: 2px solid black;
+            background-color: khaki;
+            height: 2500px;
+
+        }
+
+        .box {
+            display: inline-block;
+            border: 2px solid red;
+            width: 150px;
+            height: 150px;
+            margin: 2px;
+
+        }
+        
+
+        /* 4 types of postion :static(default) relavtive absoulte  fixed ,stickey */
+        #box3 {
+            /* position: static;  this is default value of postion even if we dont mention it  its gonna be static */
+
+
+            /* realtive:postions the element relative to its normal position */
+            /*  position:relative; */
+
+            /* position: relative;
+                top: 34px;
+                left: 34px; */
+
+            /* absolute: postions the element relative to its first parent(i.e jiske andar hain. here parent to box is "container") */
+            /*  position:absolute; */
+
+            position: absolute;
+            top: 34px;
+            left: 34px;
+            /* this box moved relative to its first parent..here container */
+
+        }
+
+        #box4 {
+            position: relative;
+            top: 34px;
+            left: 34px;
+            /* this box moved relative to its normal postion. */
+        }
+
+        #box5 {
+            /* makes its position fixed even after scrolling postion does not changes */
+            /* postion:fixed;   positons the element  relative to the browser window */
+            position: fixed;
+            left: 900px;
+            bottom: 125px;
+        }
+
+        #box6{
+            
+            /* An element with position: sticky; is positioned based on the user's scroll position.A sticky element toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). */
+           
+            position: sticky;
+            top: 0px;
+            left: 1140px;
+        }
+        /*  we can also specifically refer to the that div  in a div whose id=box6 and class=boxsp like   */
+        /*  "div#box6.boxsp" -like this */
+        .boxsp{
+            
+            border: 2px solid red;
+            width: 150px;
+            height: 150px;
+            margin: 2px;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- .box#box*4 for below   (note that unlike class id name is always unique) -->
+        <div class="box" id="box1">1</div>
+        <div class="box" id="box2">2</div>
+        <div class="box" id="box3">3</div>
+        <div class="box" id="box4">4</div>
+        <div class="box" id="box5">5. chat with us</div>
+        <!-- now this divhere below ulike above div  is not in a display inline-block. now to give this margin we have had to give it into another class since in if we increase the margin of one div ina display:inline-block  margin of all the blocks in a inline-block increases. So we removed it from the display inline-block and put it into another class named "boxsp" -->
+
+        <!-- now this div will appear below the div 1 and 2 since div is a block element it will take the complete space in its right ,check it by inspecting  -->
+        <div class="boxsp" id="box6">6</div>
+        <!-- we will learn i think in flexbox how to place div 6 in a display:inline-block with others and give the margin independantly -->
+    </div>
+</body>
+
+</html>
+<!-- i have differ the original code given by the harry ...u can the original code in the harry website or in his youtbe videos. i have just changesd the class of the div 6 to "boxsp" -->

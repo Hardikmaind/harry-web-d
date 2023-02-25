@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" >
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>more on selectors</title>
+        <style>
+            h1{
+                background-color: rgb(241, 237, 19);
+                color: black;
+                font-weight: bold;
+                text-align: center;
+            }
+            /* this means div k andar k sare p
+            div  p{
+                color: yellow;
+                background-color: green;
+                font-weight: bold;
+
+            } */
+
+
+            /* this means div k andar k li k andare k p
+            div li p{
+                color: yellow;
+                background-color: green;
+                font-weight: bold;
+
+            } */
+                /* here > means  p is directly inside div(direct child) */
+            /* div > p{
+                color: yellow;
+                background-color: green;
+                font-weight: bold;
+
+            } */
+
+            /* 
+Adjacent Sibling Selector (+)
+The adjacent sibling selector is used to select an element that is directly after another specific element.
+
+Sibling elements must have the same parent element, and "adjacent" means "immediately following".
+
+The following example selects the first <p> element that are placed immediately after <div> elements: */
+            div + p{
+                color: white;
+                background-color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>this is more on selectors</h1>
+        <div class="container">
+            <div class="row">
+                <ul>
+                    <li class="item"><p>this is another para inside li</p></li>
+                    <li>this will not get affected</li>
+                    <p>this is a para inside ul</p>
+                </ul>
+                <p>this is a paragraph</p>
+            </div>
+            <p>this is another paragraph</p>
+        </div>
+        <p>this is the outer most paragraph</p>
+    </body>
+    </html>

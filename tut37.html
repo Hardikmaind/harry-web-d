@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" >
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>css transitions</title>
+        <style>
+            #box{
+                height: 200px;
+                width: 200px;
+                background-color: cyan;
+                display:flex;
+                /* this will horizontally center the item */
+                justify-content:center;
+                /* this will vertically center the item */
+                align-items: center;
+                /* this  is the transition property */
+                transition-property: background-color;
+                transition-duration: 5s;/*this will take 2s to change the color of background when hovered to it*/
+                /* transition-timing-function: ease-in;shuruat mein slow change */
+                transition-timing-function: ease-in-out;/*in this the transition will start slowly and end slowly */
+                transition-delay: 2s;
+
+
+                /* this is the transtion shorthand property in one line */
+                /* transition:background-color transition-duration transition-timing-function transition-delay; see the example below */
+
+                /* transition:background-color 2s ease-in-out 2s; */
+                transition:all 2s ease-in-out 0.5s;
+                
+            }
+
+            /* if we didnt use the tranition it will directly incre after hovering */
+            #box:hover{
+                background-color: yellow;
+                height: 300px;
+                width: 400px;
+                border-radius: 45px;
+                font-size: 50px;
+            }
+        </style>
+    </head>
+    <body>
+         <h3>this is css transition tutorial</h3>
+         <div class="continer">
+            <div id="box">
+                this is my box
+            </div>
+         </div>
+    </body>
+</html>

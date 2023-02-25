@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" >
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>flexbox</title>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/align-items"> see align: stretch </a>
+        <br>
+        <a href="https://codepen.io/enxaneta/full/adLPwv/"> flex box playgorund u will understand everything</a>
+        <style>
+            .container {
+                height: 544px;
+                width: 100%;
+                border: 2px solid black;
+                /* initialie the container for flexbox */
+                display: flex;
+
+                /* flex properties for the flex container. this propertoes are only for the flex container */
+
+
+                
+                /* flex direction is by default is row */
+                /* flex-direction: row;    will arrange the boxes in row */
+
+                /* flex-direction: column; will arrange the boxe in column */
+
+                /* flex-direction: row-reverse;will arrange the boxes starting from negative margin axis(x-axis) */
+
+                /* flex-direction: column-reverse ; /*will arrange the boxes starting from negative cross axis (opposite of y-axis) */
+
+
+
+
+                /* flex wrap increases the responsive ness of the websitte . when shrinked in the browser it wraps the entitis into another line. some sort of word wrap like in vs code */
+
+                /* flex-wrap: nowrap; this is the default value of the flex wrap. it does nothing */
+                /* flex-wrap: wrap; */
+                /* flex-wrap: wrap-reverse;here it wrap in reverse */
+
+                /* there is shorthand in the flex named as flex-flow. this can set both the flex-direciton and the flex- wrap */
+                
+                /* flex-flow: row-reverse wrap; */
+
+
+                /* justify content it will justify the content in the horizontal direction */
+                /* justify-content: center; */
+                /* justify-content: space-between;this will put space between two boxes */
+                /* justify-content: space-evenly;space betwwn boxes and the border will be equal */
+                /* justify-content: space-around;this will give equal space around the boxes along the margin axis */
+
+                /* align items prop */
+                /* align-items: center;    this will centre the conten along the cross axis (vartical axis) */
+                /* align-items: flex-end; isse content niche aajeynea */
+                /* align-items: flex-start; isse content upar aajenge. this is by default   */
+
+                /* Flex items are stretched such that the cross-size of the item's margin box is the same as the line while respecting width and height constraints. matlab here the boxes will be evenly spaced vertically */
+                /* align-items: stretch; u can obsereve the difference if u word put the word wrap and reduce some width of the contents */
+
+                
+            }
+            .item{
+                background-color: tomato;
+                border:2px solid green;
+                margin: 10px;
+                padding: 3px;
+                width: 200px;
+                height: 200px;
+            }
+            /* flex properties for the flex items (HERE WE SHOULD TARGET INDIVIDUAL ITEMS. IF APPLIAD TO WHOLE CLASS . WHOLE CLASS WILL GROW AND SHRINK) */
+            #item1-hardik{
+                order: 2;/* this will bring the item which has higher order in last {HIGHER THE ORDER ,LATER IT SHOWS UP IN THE CONTAINER} */
+                /* default order is the way in which css is written so deafult order of the items will be(item1-hardik,item2-shrav,item3-god)  but since we have introduced the order :2; in it so it will appear in the last*/
+
+                /* in flex-grow prop negative numbers are invalid */
+
+                /* flex-grow: 2; when increase the responsive width...the this item will grow more(you can say two times in ratio more) */
+                
+            }
+            #item2-shrav{
+                /* flex-grow: 3; when increase the responsive width...the this item will grow more(you can say 3 times in ratio more) */
+            }
+            #item3-god{
+                /* this is somewhat similar to flex grow in opposite way.it just shrink. */
+                /* flex-shrink: 2; */
+                order:40; /*now since the oder of the third box is largest so it will appeat in the last*/
+            }
+            #item4{
+                flex-basis: 320px;  /*this will change tbe width of the item4*/
+                /* WHEN flex-basis:  IS SET TO ROW flex-basis: : WILL CONTROL "WIDTH" */
+                /* WHEN flex-basis:  IS SET TO COLUMN flex-basis: : WILL CONTROL "HEIGHT" */
+
+                
+            }
+            #item5{
+                /* there is a short hand known as "flex" */
+                flex: 2  2 344px;
+                /* flex:flex-grow flex-shrink flex-basis this is the shorthand */
+                align-self: flex-start; /*this will take item to flex start(i.e ending of cross axix. yes i have written it wite this is not the confusion)*/
+                align-self: flex-end;   /*this will take item to flex end(i.e starting of cros axix)*/
+                align-items: center;/*this will take item to center*/
+            }
+        </style>
+    </head>
+    <body>
+        <h1>this is flexbox tutorial</h1>
+        <div class="container">
+            <div class="item" id="item1-hardik">firstfloor</div>
+            <div class="item" id="item2-shrav">second floor</div>
+            <div class="item" id="item3-god">3rdfloor</div>
+            
+            <div class="item" id="item4">4th floor</div>
+            <div class="item" id="item5">5th floor</div>
+            <!-- <div class="item" id="item6">6th floor</div> -->
+        </div>
+    </body>
+    </html>

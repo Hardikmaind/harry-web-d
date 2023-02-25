@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" >
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>CSS variables and custom properties</title>
+        <style>
+            /* whatever variables declared inside this will be called as the global variable. they will get applied to all classes wherever they are applied . irrespective of the course */
+            :root{
+                --boxcolor:white ;
+                --primarycolor:blue ;
+                --dangercolor:red ;
+                /* we can create several other variable for example see below */
+                --maxw:333px; /*this i have created for the max width*/
+            }
+            .box{
+                /* here we have creted the variable of the color blue and named it as   "boxcolor". now if we want to change the color from blue to anyother we can do it just by changing the value of the variable from blue color to any other color  */
+
+                /* --boxcolor:violet; */
+                /* the scope of the above variable is only inside the .box class */
+
+                height: 200px;
+                width: 200px;
+                background-color:var(--boxcolor);
+                box-shadow: 3px 3px 12px var(--primarycolor);
+                border: 2px solid var(--dangercolor);
+                margin: 2px 9px;
+            }
+            .container{
+                /* --boxcolor:violet; */
+
+                display:flex;
+                align-items: center;/*this will vertically align the items inside the container*/
+                justify-content:center;/*this will horizontally align the items inside the container*/ 
+                width: var(--maxw);
+                margin: auto;/*this has centerd the continer sice we have set its width. even if we have set container display as flex. because flex will center the items inside the container*/
+                background-color: var(--dangercolor);
+                /* background-color:var(--boxcolor);backgrond will not change to change the backgound because that variable inside the class "box" is out of scope for this class "container" THESE ARE JUST LIKE THE LOCAL VARIABLE..we need to copy that variable inside this class(see we did it above) */
+
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+    </body>
+    </html>

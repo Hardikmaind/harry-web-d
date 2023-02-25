@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Json Tutorial</title>
+</head>
+<body>
+    <div class="container">This is my container</div>
+    <script>
+        let jsonObj = {
+            name: "Harry",
+            channel: "CWH",
+            friend: "Rohan Das",
+            food: "Bhindi" //#bhindiLoverSquad
+        } 
+        console.log(jsonObj);
+        // this will stringyfy our object. means convert it to string for the transmission over the network
+        let myJsonStr = JSON.stringify(jsonObj);
+        console.log(myJsonStr);
+        
+        // performed the operations on the strng,which we get from converting the object.also we can perform all the operations of string on it since it is a string after all.
+        myJsonStr = myJsonStr.replace('Harry', 'Larry');
+        console.log(myJsonStr)
+        
+        // this will objectify our string. means convert it to object from the string
+        newJsonObj = JSON.parse(myJsonStr);
+        console.log(newJsonObj)
+
+        
+
+
+    </script>
+</body>
+</html>

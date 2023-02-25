@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>arrays and obj</title>
+    <style>
+    </style>
+</head>
+
+<body>
+    <div class="container">Simple si html</div>
+    <script>
+        // this are the primitve data types
+
+        let myvar = 34;
+        let myvar2 = 'string';
+        let myvar3 = true;
+        let myvar4 = null;
+        let myvar5 = undefined;
+
+        // this is an object, it stores values in a key value pair. name is key and harry isits value
+        let employee = {
+            name: "harry",
+            salary: 234324,
+            channel: "code with harry",
+            // see and look care fully how the below channel 2 is written, if space is there use commas
+            'channel 2': 'programming with harry'
+        }
+        console.log(employee)
+
+        //in this way ...prop of an object are accessed
+
+        // we cab also use this commmand in the console in the dev tools of an browser . like employee.name (or)employee['name']
+
+        console.log("this is the salary of an employee :" + employee.salary + ". this is the name of an employee :" + employee.name + ". name of channel 2 is " + /*"employee.channel 2 " i cannot use like this*/ employee['channel 2'])
+
+
+
+
+
+
+
+        // this is an array. in js array can contain any type of data type
+        let names = [1, 2, 3, 314, 243, 234, 24, 2, 4, 'hardik', 'adi', undefined, null]
+        console.log(names)
+        // to print only a 0th index or any nth index use arry_name[n]
+        console.log(names[4])
+
+        // we can also make an array with the help of an 'new 'keyword. then it becomes an object. just remember  that the when using new keyword the brackets of the array changes
+        let arr = new Array(1, 2, 3, 314, 243, 234, 24, 2, 4, 'hardik', 'adi', undefined, null)
+        console.log(arr)
+        // this is used to find the lenght of an array
+        console.log('length of an array "arr" is ' + arr.length)
+
+        // this is used to sort an array(alphabeticall explained by adi)
+        arr = arr.sort()
+        console.log(arr)
+
+        // this will push an element inside an array at the end
+        arr.push('this is the push element in an array')
+        console.log(arr)
+
+        // to make an array of n number of element .
+        let newarr = new Array(23);
+        console.log('length of an array "newarr" is ' + newarr.length)
+        newarr = newarr.sort();
+        newarr.push('this is pushed at the last of an empty array')
+        // since the array is empty when printed the elements of an array it will sbow empty
+        console.log(newarr[5])
+        console.log(newarr[9])
+        console.log(newarr[2])
+
+
+    </script>
+</body>
+
+</html>

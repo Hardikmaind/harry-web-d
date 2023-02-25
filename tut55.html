@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" >
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>loops</title>
+        <style>
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            this is about loops
+        </div>
+        <script>
+            console.log('this is tutorial 55')
+            let i=0;
+            for(i=0;i<=3;i++){
+                console.log(i);
+
+            }
+            console.log("")
+            let friends=['hardik','sumit','tushar','avishakr','sudarshan']
+            for(let index=0;index<friends.length;index++){
+                console.log('hello my friend '+friends[index])
+            }
+
+            // this is the for each loop . it is used to iterate through all the elements
+            console.log(" ");
+            console.log("this below is because of for each ");
+            console.log(" ");
+            friends.forEach(function f(element){
+                console.log('hello my friends,'+ element)
+            })
+            
+            
+            // this is the for of  loop . it is used to iterate through all the elements
+            console.log(" ");
+            console.log("this below is because of good for each ");
+            console.log(" ");
+            for(element of friends){
+                console.log('hello my friends,'+ element)
+            }
+
+            console.log("")
+
+            //for in loop
+            // how to iterate object
+            let employee={
+                name:'harry',
+                salary:5433,
+                address:'pune'
+            }
+            // use this loop to iterater over objects in js
+            for(key in employee){
+                console.log(`the ${key} of employee is ${employee[key]}`)
+            }
+
+
+            console.log("")
+
+        // while loop in js
+        let m=0;
+        while(m<4){
+            console.log(` ${m}   is less than 4 `)
+            m++
+        }
+
+        console.log("")
+
+        // do while loop in js
+        let n=40;
+        do{
+            console.log(` ${n}   is less than 4 and we are inside do-while loop `)
+            n++
+        }while(n<4)
+
+        </script>
+    </body>
+</html>

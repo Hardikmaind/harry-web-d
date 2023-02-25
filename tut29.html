@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" >
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>size units (making respondisve elements) </title>
+        <a href="https://webdesign.tutsplus.com/tutorials/comprehensive-guide-when-to-use-em-vs-rem--cms-23984">em and rem  notes</a>
+        <style>
+            html{
+                font-size: 25px;
+                
+
+            }
+            .container {
+                font-size: 10px;
+                width: 403px;
+                /* height: 300px; */
+
+                /* viewport */
+                
+                height: 100vh;  /*this is for taking whole height of the display*/
+                width: 100vw; /*this is for taking whole width of the display
+               /* /* font-size: 10px; */
+               border:2px solid red; 
+            }
+            h1{
+                text-align: center;
+                
+            }
+            /* when to use em? when the parent element size kiya jaa raha hain toh uska child element uski proportion mein hi size hoga  */
+            #first{
+                /* font-size: 3em;  3 em means 3 guna parents ka. If child font size change then parent font size will change similarly if parent size chaange the child size will also be changed */
+
+                /* padding: 3em   ;    u will think that the paddin will be 3*10=30 but this is not the case. jab bhi aapne font size set kar diya hain.toh it will choose font size. therefor in this  padding size specified is {font-size}*3*10=90.   here in this case 3em matab 3time of font size(and not of 3times of parents) . s */
+            }
+            #second{
+                /* rem  re-size according to the font size of the root element or the html element */
+                /* font-size: 3rem;    here the font size will be 25*3=75*; 25 because of html tag */
+                /* padding:3rem;      here the padding will be 25*3=75*; 25 because of html tag     */
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1 id="first">this is the first heading</h1>
+            <h1 id="second">this is the second heading</h2>
+            <h1 id="third">this is the third heading</h3>
+
+        </div>
+    </body>
+    </html>

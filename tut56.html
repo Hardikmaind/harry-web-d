@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" >
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>manipulating DOM</title>
+        <style>
+        </style>
+    </head>
+    <body>
+        <div id="main"    class="container">
+            <ul id="nav">
+                <li>home</li>
+                <li>about</li>
+                <li>services </li>
+                <li>more about us</li>
+                <li>contact us</li>
+            </ul>
+        </div>
+        <div class="container">
+            another container
+        </div>
+        <script>
+            // with the help of this method and id , we can access our element(main). in console in dev tools in browsers. since id is unique , we can easliy target our element
+            let main=document.getElementById('main')    //gebi
+            console.log(main)
+            let nav=document.getElementById('nav')
+            console.log(nav)
+            // if we type in console in dev tools in browsers . nav.innerHTML  we can get the nav ki nadar ki string in the form of html.we can also change that string by-'nav.innerHTML="<li>dynamic element</li>"  '. now this will change the string inside the nav to the one we have specified above . result will be dynamic element
+
+            // accesing element by clas
+            let containers=document.getElementsByClassName('container') ;//gebcn
+            console.log(containers); 
+            // in devtools in console in browser by writing "container[0] we get the first container. container[1] we get the second container" 0 and 1 are the values acc to index in an array
+
+            //accessing element by CSS selector
+
+            //jo bhi pehla element hain woh selector '.container' ko match karegaa usko return kar dega. in the below case, jiki class .container hain use return kar do(u can also undersand from this line and example)
+            let sel=document.querySelector('.container')
+            // this will return nav id ka andar ka maal
+            let sel1=document.querySelector('#nav')
+            // this will return nav mein ka li(only first/pehle wala)
+            let sel2=document.querySelector('#nav>li')
+            // console.log('selector returns '+sel) dont use plus here. you will not be able to expland in the console in the devtools in browser. instead use ','.
+            console.log('selector returns ',sel)
+            console.log('selector returns ',sel1)
+            
+            // accessing selectior by css selector(all)
+
+
+            // this will return nav mein ka li(all/saare)
+            let sel3=document.querySelectorAll('#nav>li')
+            console.log('selector returns ',sel3)
+            // we can change this or manipulate by going in console in devtools in browser by typing sel3[3].innerHTMl='inserted'. if we want to change the first <li> we can do it by "sel3[3].innerHTML='hello there". the first li name will changed to hello there
+            
+        </script>
+    </body>
+</html>

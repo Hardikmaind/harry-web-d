@@ -1,0 +1,45 @@
+<!-- CSS Tutorial: Inline, Internal & External CSS | Web Development Tutorials #14
+CSS Tutorial- Inline, Internal, and External CSS
+Welcome, everyone! As in the last tutorial, we have seen there are three methods of writing CSS- Inline, Internal, and External. Here, we will discuss all these three methods and do some real implementations of CSS. To start this tutorial, first, we will make a new file as tut13.html and add the boilerplate. For our convenience, we will give the title as CSS Tutorial in the <title> tag. 
+
+Inline CSS allows you to apply a unique style to one HTML element at a time. You can assign the Inline CSS to a specific HTML element by using the style attribute with any CSS properties defined within it. Let us try to understand this with an example.
+<body>
+         <h1>This is CSS tutorial</h1>
+          <p style= “color: red;”>This tutorial will teach you everything you need to know about CSS</p>
+</body>
+By writing the above code, we will see the changes as-
+
+
+
+You must be thinking this is the best way to add CSS on the website but I will let you know that it is not the best method to style your HTML. If you add too much Inline CSS, then your HTML will become too messy to understand for you.
+
+Internal CSS is used to define a style tag for a single HTML page. It is defined in the <head> section within a <style> element. Let us understand the External CSS with the help of an example.
+<head>
+     <style>
+              p{
+                   color: purple;
+                 }
+     <style>
+<head>
+By writing the above code, we will get the output as-
+
+
+
+One important point to note here is, Inline CSS is given more priority than Internal CSS.
+
+External CSS is mostly used when you want to make changes on multiple pages. It is an ideal condition because it facilitates you to change the look of the entire website by changing just one file. We will add the stylesheet in the <head> section using <link> tag.
+<head>
+       <link rel= “stylesheet” href= “tut13.css”>
+<head>
+Then in tut13.css file, we can write our CSS-
+
+p{
+       Color: greenyellow;
+}
+By writing this code, and linking it to the HTML file, you notice the change-
+
+
+
+The point here to remember is that whether it is the Internal CSS or the External CSS, whichever is written after, gets the priority. But if you want that first one should get priority, so you can add important after it. The result will be, it will get the most priority of all.
+
+So I hope you must have understood all the three types of CSS used to style our website. From the next tutorials, we will see some more interesting properties about CSS. Till then stay with the tutorials and keep practicing whatever is taught till now. -->

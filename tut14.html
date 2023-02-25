@@ -1,0 +1,37 @@
+<!-- priority is given to inline css among all the three types of css -->
+<!-- amonng the  internal and external css....priority is given to that which is written later -->
+<!-- if  there is such condition on which the internal is written first and external is written later but we have to show the internal css  then there is a keyword called "!important" due to this keyword no external or inline css can overwrite the internal css-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" >
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>CSS tutorial</title>
+    </head>
+    <body>
+        <h3>this is css tutorial</h3>
+        <!-- below we  have used the inline css, it has the highet priority -->
+        <!-- <p style="color:red;background-color:yellow">this tutorial will teach you everythiing you need to know about html/css </p> -->
+         
+        <!-- below we have used the internal css -->
+        
+        <!-- style tag is used to write the css internally -->
+        <style>
+            /* to enter the random color of our choice hover the cusror over the color name..then the pallete will appear */
+            p{
+                color:rgb(0, 0, 0) !important;
+                background-color:rgb(241, 241, 243)  !important;
+                /* since we have used the !important keyword...this internal css cannot be overwritten..and therefore this will apper this has the hightest priority */
+
+                /*we have to write imp on the  every line of style like the above . Or the priority rules will get applies to the styling sheet*/
+                
+            }
+        </style>
+        <!-- below we can include our external css file..this is called external css -->
+        <link rel="stylesheet" href="tut14.css"  >
+       
+        <p>hello imma learning css`</p>
+    </body>
+    </html>

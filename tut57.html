@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>js events</title>
+    <style>
+        #btn {
+            padding: 10px 14px;
+
+            border: 2px solid black;
+            background-color: cyan;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Browser Events:
+
+
+
+
+        click
+        contextmenu
+        mouseover/mouseout
+        matlab button dabaya hain/matlab button chod  diya hain
+        mousedown/mouseup
+        mousemove   
+
+        formevents:
+        submit
+        focus
+
+        DomContenLoaded
+
+        transitonend -->
+
+    <div class="container">
+        <h1>this is my heading</h1>
+        <p id="para">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla blanditiis voluptates aspernatur a
+            fugiat temporibus repudiandae rem beatae tempore esse eveniet perspiciatis doloribus, accusantium nam eius
+            ullam similique atque velit placeat consequuntur voluptate quod explicabo! Unde, nisi et. Magni molestias
+            nobis adipisci, similique necessitatibus asperiores aut voluptatem totam quisquam, non aliquam, perferendis
+            unde pariatur iste veniam blanditiis quo qui. Fugit rerum eaque culpa distinctio quam fuga corrupti quisquam
+            quasi, facere expedita porro quos enim libero ullam repellendus doloribus illum voluptatibus beatae,
+            molestias veritatis! Quaerat aut iure saepe! Repellat, fugit. Veritatis fugit blanditiis tempore!
+            Repellendus, quisquam, nihil deserunt distinctio quidem eligendi ratione cum corrupti quis consequuntur,
+            optio facilis. Eius aut consequuntur doloribus ut accusantium dolor tenetur eaque. Aliquid, earum, quidem
+            commodi incidunt dolor nam cum omnis cumque velit aperiam explicabo enim consequatur animi iure ea non
+            perspiciatis assumenda. Qui impedit aliquam culpa facere vitae beatae, dolores quas nobis amet pariatur
+            libero aperiam? Molestiae, nulla numquam assumenda commodi vero error? Perferendis labore illo eaque neque?
+            Quas impedit molestiae praesentium quidem? Ducimus delectus incidunt vitae cupiditate veritatis modi,
+            consequatur maxime hic provident repudiandae blanditiis omnis rem odit fuga deleniti sit odio voluptatem
+            recusandae culpa obcaecati reprehenderit quod amet. Minus aperiam suscipit obcaecati consequuntur ducimus
+            ratione repudiandae dolorem, consectetur veritatis dolore aliquid commodi sapiente eveniet hic labore velit
+            eligendi fuga id! Dolorem eos impedit, cumque quis enim culpa omnis officia dolores molestiae facilis eum
+            quas aperiam porro?</p>
+    </div>
+    <!-- so we want that whne we click the button below the p hided and show -->
+    <!-- below we have specified that on clicking the we run the hide() funtion. so we hae to write the hide funtion -->
+    <button id="btn" onclick="toggleHide()">show/hide</button>
+
+    <script>
+
+        //by this when we take mouse over the paragraph. the run funtions runs which gives alert. this is the event
+        //this is the 'mouseover' event
+
+        // now even if we dont write the below line which declare the para variable which access the para id. it doesnt show error. until and unless the id is used as variable
+        let para = document.getElementById('para');
+        para.addEventListener('mouseover',function run(){
+            alert('mouse inside')
+
+            // this gives us info in the console whether the mousie is inside
+            console.log('mouse inside')
+        })
+        
+        
+        //since we already declare the the variable para .no need to declare it again and again. if declare again it gives an error
+        //this is the mouse out event
+        para = document.getElementById('para');
+        para.addEventListener('mouseout',function run(){
+            alert('mouse outside the para ')
+            // this gives us info in the console whether the mousie is inside
+            console.log('mouse outside the para ')
+        })
+
+        //by this, this toggles our show/hide the paragraph
+        function toggleHide() {
+            //now even if we didnt write the variable which points or gets the id (or) if we comment it then also in todayys modern browser . in the see below para variable points towards the 'para' id.until and unless the id is used as variable. Now it is obvious that if we change the variable which is same as id.the variable will get overwritten and then it will not point towards the id. see below example
+
+            // let btnheu = document.getElementById('btn');
+            // let para = document.getElementById('para');
+            // let para=2
+
+                // this is how we specifit the css inside the JS. this below means para ki style(css) jiski display !=none, hain....uski dispaly none karde
+            if (para.style.display != 'none') {
+
+                // in this way we change the css
+                para.style.display = 'none';
+            }
+            else {
+                // this means para ki style(css) display block kar de
+                para.style.display = 'block';
+
+            }
+        }
+    </script>
+</body>
+
+</html>

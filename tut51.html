@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Scope and conditionals</title>
+    <style>
+    </style>
+</head>
+
+<body>
+    <!-- div>ul>li{Item-$}*7 -->
+    <div>
+        <ul>
+            <li>Item-1</li>
+            <li>Item-2</li>
+            <li>Item-3</li>
+            <li>Item-4</li>
+            <li>Item-5</li>
+            <li>Item-6</li>
+            <li>Item-7</li>
+        </ul>
+    </div>
+    <script>
+        var string1 = 'this is a string';
+        var string1 = 'this is a string no 2';
+        // now the value of the string will be overwritten
+        console.log(string1);
+        // in this case this above doesnt give u problems. but see below
+
+        // scope of the u is block level...and it cannot be declared again ana again like in java
+        // let u='a';
+        // let u='ab';
+
+
+        // from this time we will use let only instead of var
+        let a = "hello world"
+        {
+            // scope of this below is limited to this block only    
+            let a = 'hello my name is hardik'
+            console.log(a); //here it will print the sting which is presnt iside the block
+        }
+        // console.log(a); here it will print the 'a'  which is written above the block
+
+        // const
+        const b = 'this cannot be changed';
+        console.log(b);
+        // sunce it is const it cannot be changed. this will throw an erroe
+        // const b ='i want to change .this cannot be changed';
+
+        // if else statements
+
+        let age = 2;
+        if (age > 18) {
+            console.log('you can drink water')
+        }
+        else if (age == 2) {
+            console.log('age is 2')
+        }
+        else {
+
+            console.log('u can drink cold drink')
+        }
+
+
+        // switch case
+        const cups = 4;
+        // cups=55; this cannnot be done since cup is declared as const
+        switch (cups) {
+            case 4:
+                console.log('the value of cup is 4')
+                break;  //if i remove the  break and this conditons hit then ..whatever written in this bklock will get print and all the below content of the below condition will get print
+            case 41:
+                console.log('the value of cup is 41')
+                break;
+            case 42:
+                console.log('the value of cup is 42')
+                break;
+            case 43:
+                console.log('the value of cup is 43')
+                break;
+            //if none of the case gets matched then default conditon is hit
+            default:
+                console.log('the value of cup is none of 4,41,42   & 43')
+                break;
+        }
+    </script>
+</body>
+
+</html>

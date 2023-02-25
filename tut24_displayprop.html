@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" >
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>CSS display property</title>
+
+        <!-- problem is created when block element is there in inline and when inline element is there in block -->
+
+        <!-- Block element:  A block-level element always starts on a new line.A block-level element always takes up the full width available. A block level element has a top and a bottom margin, whereas an inline element does not.
+        
+        We can center only block element using margin:auto , therefore to center inline elements first we need to convert them to block elements. Even in the case of block, first we need to set their width to centre them using margin:auto.
+    
+        width can only be set of block element . no widht of inline element can be set. inline ka matlab hain hitni jagah hain utni lelo,jitni milti hain jagah utni lelo. black mein puri jagah le leta hain, so here we have to set the width and this block element can be centre by using margin auto after setting width only.
+    
+        inline element can be converted into block element into with the help of display:block then we set width then we set margin:auto then that element is centered
+    
+        ## display:inline means jitna bada element hain utni space le lega
+        ## display:block ka matlab hain hum uski width ko set kar sakte hain and chaheto usmein margin:auto karke usse centre kar sakte hain
+        ## Now suppose we want to make an element inline as well as customize its width too, then in that case we can use display:inline-block. -->
+        
+        <style>
+            *{
+                box-sizing: border-box;
+            }
+
+            /* this is an inline element */
+
+            /* inline element can be converted into block element into with the help of display:block then we set width then we set margin:auto then that element is centered */
+
+            img{
+                display: block;
+                width: 34px;
+                margin: auto;
+                
+            }
+            h3{
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                margin: 0px;
+                text-align: center;
+            }
+            /* this is an block element */
+            header{
+                /* no need of the below commented portion since we have centred the inside elements so we removed the margin and the width */
+
+                /* margin: auto; */
+                border: 2px solid red;
+                /* width: 40%; */
+                
+                width: 1200px;
+                margin: auto;
+                
+            }
+            .box{
+                border: 4px solid black;
+                background:grey;
+                margin:4px  0px;    /*also we removed the margin so that it fits exactly below the header and give margin top so that it doesnt stick to our header*/
+                padding: 23px;
+                box-sizing: border-box;
+                display: inline-block;
+                /* taken 33pc because we need it to have same width as the container..thodasa jo baher hain wo 1pc ke wajase(33+33+33=99) so it will directly come under the header box */
+                width: 33%; /* or if we take width as 397px it will come exact*/
+
+            }
+            .container{
+            
+               margin: auto;
+               width: 1200px;
+            }
+        </style>
+    </head>
+    <body>
+        <header class="top">
+            <img src="https://yt3.ggpht.com/ytc/AL5GRJX7LBvNaQFl0ODpVbrt2F4ajG_wY0fKpZGsEqi8Jw=s88-c-k-c0x00ffffff-no-rj" alt="">
+            <h3>welcome to hardiks blog</h3>
+        </header>
+        <div class="container">
+            <div class="box">
+                <h4 class="heading">
+                    heading 
+                </h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet quaerat earum ipsa, temporibus nisi quia iure eveniet delectus nemo enim, ad provident dicta eaque nesciunt at itaque illo illum, alias est et? Voluptates laborum minus ipsam nemo soluta at consequuntur laboriosam magnam quas aperiam.</p>
+            </div>
+            <div class="box">
+                <h4 class="heading">
+                    heading 
+                </h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet quaerat earum ipsa, temporibus nisi quia iure eveniet delectus nemo enim, ad provident dicta eaque nesciunt at itaque illo illum, alias est et? Voluptates laborum minus ipsam nemo soluta at consequuntur laboriosam magnam quas aperiam.</p>
+            </div>
+            <div class="box">
+                <h4 class="heading">
+                    heading 
+                </h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet quaerat earum ipsa, temporibus nisi quia iure eveniet delectus nemo enim, ad provident dicta eaque nesciunt at itaque illo illum, alias est et? Voluptates laborum minus ipsam nemo soluta at consequuntur laboriosam magnam quas aperiam.</p>
+            </div>
+        </div>
+       
+    </body>
+    </html>

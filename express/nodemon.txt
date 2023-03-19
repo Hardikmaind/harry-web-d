@@ -1,0 +1,1 @@
+since i havent installed the nodemon globally to start it use the command in the folder express (here nodemon is installed) "npx nodemon" by this it will automatically restart the node application when file chaanges in the directory are detected.

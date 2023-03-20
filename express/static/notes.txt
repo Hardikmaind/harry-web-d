@@ -1,4 +1,4 @@
 #here all the static pages will be stored in the static folder
-#here index.js and style.css is an static folder
+#here index.js and style.css is an static files
 
 
